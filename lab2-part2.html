@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,9 @@
     <link rel="stylesheet" href="css/lab2-problem1.css">
     <title>Lab 2 - Problem 2</title>
 </head>
+
 <body>
-    
+
     <div class="container">
         <div class="row mt-5">
             <div class="col-12">
@@ -21,25 +23,67 @@
         </div>
     </div>
 
-<!-- jQuery -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<!-- Bootstrap JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-<!-- Lab 2 - Part 1 JavaScript -->
-<script>
-    function startThings(){
-        let romanNumeral; // do not modify
-        // your code goes here
-        // be sure to assign the roman numeral to the variable romanNumeral
-        // it will be used to display it on the web page using the code below
+    <!-- jQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Lab 2 - Part 1 JavaScript -->
+    <script>
+        function startThings() {
+            let romanNumeral; // do not modify
+            //let numberRange;
+            let theNumber = Number(prompt("Pick a number between 1 and 10."));
 
 
+            if (theNumber < 1 || theNumber > 10) {
+                theNumber = 0;
+            }
 
-        // do not modify start
-        let outputDiv = document.getElementById('output');
-        outputDiv.innerHTML = romanNumeral;
-        // do not modify end
-    }
-</script>
+            switch (theNumber) {
+                case 0:
+                    romanNumeral = "Please pick a number between 1 and 10";
+                    break;
+                case 1:
+                    romanNumeral = "I";
+                    break;
+                case 2:
+                    romanNumeral = "II";
+                    break;
+                case 3:
+                    romanNumeral = "III";
+                    break;
+                case 4:
+                    romanNumeral = "IV";
+                    break;
+                case 5:
+                    romanNumeral = "V";
+                    break;
+                case 6:
+                    romanNumeral = "VI";
+                    break;
+                case 7:
+                    romanNumeral = "VII";
+                    break;
+                case 8:
+                    romanNumeral = "VIII";
+                    break;
+                case 9:
+                    romanNumeral = "IX";
+                    break;
+                case 10:
+                    romanNumeral = "X";
+                    break;
+                default:
+                    romanNumeral = "Why didn't you enter a number?";
+                    break;
+            }
+
+            // do not modify start
+            let outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = romanNumeral;
+            // do not modify end
+        }
+    </script>
 </body>
+
 </html>

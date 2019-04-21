@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="css/lab2-problem1.css">
     <title>Lab 2 - Problem 1</title>
 </head>
+
 <body>
 
     <div class="container">
@@ -21,25 +23,51 @@
         </div>
     </div>
 
-<!-- jQuery -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<!-- Bootstrap JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-<!-- Lab 2 - Part 1 JavaScript -->
-<script>
-    function startThings(){
-        let romanNumeral; // do not modify
-        // your code goes here
-        // be sure to assign the roman numeral to the variable romanNumeral
-        // it will be used to display it on the web page using the code below
+    <!-- jQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Lab 2 - Part 1 JavaScript -->
+    <script>
+        function startThings() {
+            let romanNumeral; // do not modify
+            // your code goes here
+            // be sure to assign the roman numeral to the variable romanNumeral
+            // it will be used to display it on the web page using the code below
+            let theNumber = Number(prompt("Pick a number between 1 and 10."));
 
+            if (theNumber < 1 || theNumber > 10) {
+                romanNumeral = "Please pick a number between 1 and 10";
+            } else if (theNumber === 1) {
+                romanNumeral = "I";
+            } else if (theNumber === 2) {
+                romanNumeral = "II";
+            } else if (theNumber === 3) {
+                romanNumeral = "III";
+            } else if (theNumber === 4) {
+                romanNumeral = "IV";
+            } else if (theNumber === 5) {
+                romanNumeral = "V";
+            } else if (theNumber === 6) {
+                romanNumeral = "VI";
+            } else if (theNumber === 7) {
+                romanNumeral = "VII";
+            } else if (theNumber === 8) {
+                romanNumeral = "VIII";
+            } else if (theNumber === 9) {
+                romanNumeral = "IX";
+            } else if (theNumber === 10) {
+                romanNumeral = "X";
+            } else {
+                romanNumeral = "Why didn't you give me a number?";
+            }
 
-
-        // do not modify start
-        let outputDiv = document.getElementById('output');
-        outputDiv.innerHTML = romanNumeral;
-        // do not modify end
-    }
-</script>
+            // do not modify start
+            let outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = romanNumeral;
+            // do not modify end
+        }
+    </script>
 </body>
+
 </html>
